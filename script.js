@@ -1,3 +1,4 @@
+//PC answer
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber == 0) {
@@ -12,7 +13,7 @@ function getComputerChoice() {
     }
 }
 
-
+//Human answer
 function getHumanChoice() {
     let promptUser = prompt("Rock, paper or scissors?").toLowerCase();
     if (promptUser == "rock") { 
@@ -24,21 +25,22 @@ function getHumanChoice() {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+//gave both functions above a variable so that I can easily work it
+
     
 
 function playGame() {
+
+    //score
 let humanScore = 0;
 let computerScore = 0;
 
-if (humanScore < 5 && computerScore < 5) {
-    playRound(humanSelection, computerSelection);
-} else {
-    console.log("games over")
-}
+//plays 1 round of RPS and adds the score
+function playRound() {
 
-function playRound(humanChoice, computerChoice) {
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
     if (computerSelection == "rock" && humanSelection == "scissors") {
         console.log("you lost because rock beats scissors")
         computerScore++;
@@ -63,8 +65,16 @@ function playRound(humanChoice, computerChoice) {
     } else if (computerSelection == "scissors" && humanSelection == "rock") {
         console.log("you won because scissors loses to rock")
         humanScore++;
-    }  
+    }   
 }
+
+//farloopada but doesnt work :(
+for(let i = 0; i < 5; i++) {
+    playRound()
+} 
+
+console.log(humanScore, computerScore)
+
 }
 
 playGame();

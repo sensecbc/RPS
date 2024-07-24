@@ -1,6 +1,6 @@
 //PC answer
 function getComputerChoice() {
-    let randomNumber = Math.floor(Math.random() * 3);
+    const randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber == 0) {
         console.log(randomNumber)
         return "rock";
@@ -15,7 +15,7 @@ function getComputerChoice() {
 
 //Human answer
 function getHumanChoice() {
-    let promptUser = prompt("Rock, paper or scissors?").toLowerCase();
+    const promptUser = prompt("Rock, paper or scissors?").toLowerCase();
     if (promptUser == "rock") { 
         return "rock";
     } else if (promptUser == "paper") {
@@ -38,6 +38,7 @@ let computerScore = 0;
 //plays 1 round of RPS and adds the score
 function playRound() {
 
+    //had to get this part of the code inside the playGame function so that it would repeat 5 times
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
@@ -67,8 +68,7 @@ const computerSelection = getComputerChoice();
         humanScore++;
     }   
 }
-
-//farloopada but doesnt work :(
+//repeats the game 5 times
 for(let i = 0; i < 5; i++) {
     playRound()
 } 

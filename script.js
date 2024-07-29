@@ -1,80 +1,83 @@
-//PC answer
-function getComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * 3);
-    if(randomNumber == 0) {
-        console.log(randomNumber)
-        return "rock";
-    } else if (randomNumber == 1) {
-        console.log(randomNumber)
-        return "paper";
-    } else {
-        console.log(randomNumber)
-        return "scissors";
-    }
-}
-
-//Human answer
-function getHumanChoice() {
-    const promptUser = prompt("Rock, paper or scissors?").toLowerCase();
-    if (promptUser == "rock") { 
-        return "rock";
-    } else if (promptUser == "paper") {
-        return "paper";
-    } else {
-        return "scissors";
-    }
-}
-
-//gave both functions above a variable so that I can easily work it
-
-    
-
-function playGame() {
-
-    //score
-let humanScore = 0;
+const choices = ["rock", "paper", "scissors"];
+let btnRock = document.querySelector("#rock");
+let btnPaper = document.querySelector("#paper");
+let btnScissors = document.querySelector("#scissors");
+let computerScoreboard = document.querySelector("#computerScoreboard");
+let playerScoreboard = document.querySelector("#playerScoreboard");
+let numberTies = document.querySelector("#ties");
+let announcer = document.querySelector("#announcer");
 let computerScore = 0;
+let playerScore = 0;
+let ties = 0;
+announcer.textContent = "press rock, paper or scissors!";
 
-//plays 1 round of RPS and adds the score
-function playRound() {
+btnRock.addEventListener("click", playRock);
+function playRock() {
+  const computerSelection = choices[Math.floor(Math.random() * choices.length)];
+  console.log(computerSelection);
+  if (computerSelection === "rock") {
+    ties++;
+    announcer.textContent = "Computer drew rock as well, you've tied!";
+  } else if (computerSelection === "paper") {
+    computerScore++;
+    announcer.textContent = "Computer drew paper, you've lost!";
+  } else if (computerSelection === "scissors") {
+    playerScore++;
+    announcer.textContent = "Computer drew scissors, you've won!";
+  }
+  computerScoreboard.textContent = computerScore;
+  playerScoreboard.textContent = playerScore;
+  numberTies.textContent = ties;
 
-    //had to get this part of the code inside the playGame function so that it would repeat 5 times
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-    if (computerSelection == "rock" && humanSelection == "scissors") {
-        console.log("you lost because rock beats scissors")
-        computerScore++;
-    } else if (computerSelection == "rock" && humanSelection == "paper") {
-        console.log("you won because rock loses to scissors")
-        humanScore++;
-    } else if (computerSelection == "rock" && humanSelection == "rock") {
-        console.log("tied rock rock")
-    } else if (computerSelection == "paper" && humanSelection == "rock") {
-        console.log("you lost because paper beats rock")
-        computerScore++;
-    } else if (computerSelection == "paper" && humanSelection == "scissors") {
-        console.log("you won because paper loses to scissors")
-        humanScore++;
-    } else if (computerSelection == "paper" && humanSelection == "paper") {
-        console.log("tied paper paper")
-    } else if (computerSelection == "scissors" && humanSelection == "paper") {
-        console.log("you lost because scissors beats paper")
-        computerScore++;
-    } else if (computerSelection == "scissors" && humanSelection == "scissors") {
-        console.log("tied scissors scissors")
-    } else if (computerSelection == "scissors" && humanSelection == "rock") {
-        console.log("you won because scissors loses to rock")
-        humanScore++;
-    }   
-}
-//repeats the game 5 times
-for(let i = 0; i < 5; i++) {
-    playRound()
-} 
-
-console.log(humanScore, computerScore)
-
+  if (playerScore > 5 || computerScore > 5) {
+    endgame();
+  }
 }
 
-playGame();
+btnPaper.addEventListener("click", playPaper);
+function playPaper() {
+  const computerSelection = choices[Math.floor(Math.random() * choices.length)];
+  console.log(computerSelection);
+  if (computerSelection === "rock") {
+    announcer.textContent = "Computer drew rock, you've won!";
+    playerScore++;
+  } else if (computerSelection === "paper") {
+    ties++;
+    announcer.textContent = "Computer drew paper, you've tied!";
+  } else if (computerSelection === "scissors") {
+    computerScore++;
+    announcer.textContent = "Computer drew scissors, you've lost!";
+  }
+  computerScoreboard.textContent = computerScore;
+  playerScoreboard.textContent = playerScore;
+  numberTies.textContent = ties;
+
+  if (playerScore > 5 || computerScore > 5) {
+    endgame();
+  }
+}
+
+btnScissors.addEventListener("click", playScissors);
+function playScissors() {
+  const computerSelection = choices[Math.floor(Math.random() * choices.length)];
+  console.log(computerSelection);
+  if (computerSelection === "rock") {
+    announcer.textContent = "Computer drew rock, you've lost!";
+    computerScore++;
+  } else if (computerSelection === "paper") {
+    announcer.textContent = "Computer drew rock, you've won";
+    playerScore++;
+  } else if (computerSelection === "scissors") {
+    announcer.textContent = "Computer drew rock, you've tied";
+    ties++;
+  }
+  computerScoreboard.textContent = computerScore;
+  playerScoreboard.textContent = playerScore;
+  numberTies.textContent = ties;
+
+  if (playerScore > 5 || computerScore > 5) {
+    endgame();
+  }
+}
+
+function endgame() {}

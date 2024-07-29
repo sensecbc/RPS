@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="buttons">
+                <button id="rock"><image src="https://t3.ftcdn.net/jpg/01/23/14/80/360_F_123148069_wkgBuIsIROXbyLVWq7YNhJWPcxlamPeZ.jpg"></button>
+                <button id="paper"><image src="https://images.pexels.com/photos/1587442/pexels-photo-1587442.jpeg?cs=srgb&dl=pexels-colys-hat-740764-1587442.jpg&fm=jpg"></button>
+                <button id="scissors"><image src="https://cdn.pixabay.com/photo/2012/04/11/16/06/scissors-28697_1280.png"></button>
+            </div>
+
+            <p id="announcer"></p>
+        
+            <div class="scores">
+                <div class="vertical-align">
+                    <h2>Player Score</h2>
+                    <p id="playerScoreboard"></p>
+                </div>
+                <div class="vertical-align">
+                    <h2>Computer Score</h2>
+                    <p id="computerScoreboard"></p>
+                </div>
+                <div class="vertical-align">
+                    <h2>Tie</h2>
+                    <p id="ties"></p>
+                </div>
+            </div>
+        </div>
     <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+    </body>
 </html>

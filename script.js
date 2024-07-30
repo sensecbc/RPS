@@ -88,13 +88,16 @@ function endgame() {
   buttons.style.display = "none";
   announcer.style.display = "none";
   scores.style.display = "none";
+
   if (playerScore > 4) {
     resetButton.textContent = "YOU WIN. PLAY AGAIN?";
-    document.querySelector(".container").appendChild(resetButton);
   } else if (computerScore > 4) {
     resetButton.textContent = "TRY AGAIN?";
-    document.querySelector(".container").appendChild(resetButton);
   }
+
+  // Show reset button again
+  document.querySelector(".container").appendChild(resetButton);
+  resetButton.style.display = "block";
 }
 
 resetButton.addEventListener("click", reset);

@@ -1,0 +1,87 @@
+[33mcommit 4287a2fea95b55fd83ad15217c11c01fcf05ddc2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mRPS-ui[m[33m)[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Tue Jul 30 17:53:42 2024 +0100
+
+    missing loop
+
+[33mcommit f7c04a474a90a5707df924c0ddd45826c3086eac[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 29 20:44:51 2024 +0100
+
+    added a bunch of things
+
+[33mcommit 5cf67408a682c361995b11cb3adf45f305b7f42f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/RPS-ui[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Wed Jul 24 15:57:12 2024 +0100
+
+    added some comments after review of the code
+
+[33mcommit 592cf6126a3e3d266ddba0ca620867e8e8bf0e06[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Tue Jul 23 19:22:10 2024 +0100
+
+    done, will study again
+
+[33mcommit c6aadc8fbf6f166354fda6f7e6befb2d28a616f5[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Tue Jul 23 18:16:09 2024 +0100
+
+    playGame function created. trying to make the game repeat itself 5 times now
+
+[33mcommit 7778c417497a16df2a725a60233641a896d15d57[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Tue Jul 23 16:49:16 2024 +0100
+
+    starting over, fuck it
+
+[33mcommit 17772d24308a19c9b5917fa74a3b215d52c34969[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 21:31:14 2024 +0100
+
+    think im done
+
+[33mcommit a65b517e308971f3e307e192c0466aba962a1a04[m
+Merge: 1f9349c 8de946b
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 21:22:18 2024 +0100
+
+    Merge branch 'main' of github.com:sensecbc/RPS
+    just need to bro
+
+[33mcommit 1f9349c4aa0c88248cae2d02333d37abe91a12b2[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 21:20:48 2024 +0100
+
+    commit
+
+[33mcommit ffa1bc8969b827d0537908f181d3fe4c87635a94[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 21:19:49 2024 +0100
+
+    need to do the last time
+
+[33mcommit 8de946bf28eacc01180dbd5a3fa0ed909bcd3997[m
+Author: Renato Tavares <rtavares4@ua.pt>
+Date:   Mon Jul 22 21:19:24 2024 +0100
+
+    Update README.md
+
+[33mcommit 634605c57c16de1c9795916e126afe5a2fe9ed95[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 18:56:36 2024 +0100
+
+    computer side is now done.
+    
+    Need to now add the user logic and compare the two.
+
+[33mcommit cf355897fcc7a7aa825a64b515686f0314db29ad[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Mon Jul 22 18:31:35 2024 +0100
+
+    added html and js
+
+[33mcommit 2eb001cf5cd5e99442489bc92afb86b339cff42c[m
+Author: sensecbc <rtavares4@ua.pt>
+Date:   Sat Jul 20 20:38:15 2024 +0100
+
+    Initial commit

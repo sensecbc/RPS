@@ -9,7 +9,11 @@ let announcer = document.querySelector("#announcer");
 let computerScore = 0;
 let playerScore = 0;
 let ties = 0;
+let buttons = document.querySelector(".buttons");
+let scores = document.querySelector(".scores");
 announcer.textContent = "press rock, paper or scissors!";
+const resetButton = document.createElement("button");
+resetButton.className = "jsButton";
 
 btnRock.addEventListener("click", playRock);
 function playRock() {
@@ -29,7 +33,7 @@ function playRock() {
   playerScoreboard.textContent = playerScore;
   numberTies.textContent = ties;
 
-  if (playerScore > 5 || computerScore > 5) {
+  if (playerScore > 4 || computerScore > 4) {
     endgame();
   }
 }
@@ -52,7 +56,7 @@ function playPaper() {
   playerScoreboard.textContent = playerScore;
   numberTies.textContent = ties;
 
-  if (playerScore > 5 || computerScore > 5) {
+  if (playerScore > 4 || computerScore > 4) {
     endgame();
   }
 }
@@ -75,9 +79,35 @@ function playScissors() {
   playerScoreboard.textContent = playerScore;
   numberTies.textContent = ties;
 
-  if (playerScore > 5 || computerScore > 5) {
+  if (playerScore > 4 || computerScore > 4) {
     endgame();
   }
 }
 
-function endgame() {}
+function endgame() {
+  buttons.style.display = "none";
+  announcer.style.display = "none";
+  scores.style.display = "none";
+  if (playerScore > 4) {
+    resetButton.textContent = "YOU WIN. PLAY AGAIN?";
+    document.querySelector(".container").appendChild(resetButton);
+  } else if (computerScore > 4) {
+    resetButton.textContent = "TRY AGAIN?";
+    document.querySelector(".container").appendChild(resetButton);
+  }
+}
+
+resetButton.addEventListener("click", reset);
+function reset() {
+  console.log("boas");
+  computerScore = 0;
+  playerScore = 0;
+  ties = 0;
+  playerScoreboard.textContent = "0";
+  computerScoreboard.textContent = "0";
+  numberTies.textContent = "0";
+  resetButton.style.display = "none";
+  buttons.style.display = "flex";
+  announcer.style.display = "block";
+  scores.style.display = "flex";
+}
